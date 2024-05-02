@@ -2,7 +2,7 @@
 opkg update
 opkg install block-mount kmod-fs-ext4 e2fsprogs parted kmod-usb-storage
 
-mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/mmcblk0
 
 DISK="/dev/mmcblk"
 yes y |parted -s ${DISK} -- mklabel gpt mkpart extroot 2048s -2048s
