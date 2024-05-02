@@ -2,6 +2,7 @@
 set -e
 opkg update
 opkg install block-mount kmod-fs-ext4 e2fsprogs parted kmod-usb-storage
+opkg install kmod-sdhci-mt7620
 
 mkfs.ext4 /dev/mmcblk0
 
