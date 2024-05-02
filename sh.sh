@@ -4,7 +4,7 @@ opkg update
 opkg install block-mount kmod-fs-ext4 e2fsprogs parted kmod-usb-storage
 opkg install kmod-sdhci-mt7620
 
-mkfs.ext4 /dev/mmcblk0
+#mkfs.ext4 /dev/mmcblk0
 
 DISK="/dev/mmcblk0"
 parted -s ${DISK} -- mklabel gpt mkpart extroot 2048s -2048s
