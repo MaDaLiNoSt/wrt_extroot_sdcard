@@ -6,9 +6,9 @@ opkg install kmod-sdhci-mt7620
 
 mkfs.ext4 /dev/mmcblk0
 
-DISK="/dev/mmcblk"
+DISK="/dev/mmcblk0"
 yes y |parted -s ${DISK} -- mklabel gpt mkpart extroot 2048s -2048s
-DEVICE="${DISK}0"
+DEVICE="${DISK}"
 yes y |mkfs.ext4 -L extroot ${DEVICE}
 
 eval $(block info ${DEVICE} | grep -o -e 'UUID="\S*"')
