@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 opkg update
 opkg install block-mount kmod-fs-ext4 e2fsprogs parted kmod-usb-storage
 
